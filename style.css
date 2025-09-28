@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(8, 70px);
+    grid-template-rows: repeat(8, 70px);
+    width: 560px;
+    height: 560px;
+    border: 5px solid #333;
+}
+
+.square {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    user-select: none; /* Prevents text selection on pieces */
+}
+
+.light {
+    background-color: #f0d9b5;
+}
+
+.dark {
+    background-color: #b58863;
+}
+
+.piece {
+    cursor: pointer;
+}
+
+.selected {
+    background-color: #6a9c78 !important; /* Highlight for selected piece */
+}
+
+.valid-move {
+    background-color: rgba(4, 184, 8, 0.5); /* Greenish highlight for valid moves */
+    border-radius: 50%;
+}
+
+#status-display {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#restart-button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+}
